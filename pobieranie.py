@@ -11,7 +11,6 @@ with open('dane.csv', 'w', newline=';', encoding='utf-8') as file:
 
     writer.writeheader()
 
-    # data[0]["rates"] to lista kursów walut
     for kurs in data[0]["rates"]:
         writer.writerow({
             "currency": kurs["currency"],
@@ -19,3 +18,4 @@ with open('dane.csv', 'w', newline=';', encoding='utf-8') as file:
             "bid": kurs["bid"],
             "ask": kurs["ask"]
         })
+
